@@ -16,8 +16,8 @@ export function HeroSection() {
     <section id="accueil" className="relative overflow-hidden bg-brand-ink">
       <div className="absolute inset-0">
         <Image
-          src="/images/hero-marrakech.jpg"
-          alt="La Koutoubia au coucher du soleil, entourée de palmiers, symbole de Marrakech et du patrimoine immobilier haut de gamme"
+          src="/images/hero-agadir.jpg"
+          alt="La plage d'Agadir dominée par la colline de la Kasbah, bordée de résidences en front de mer, symbole d'Agadir et du patrimoine immobilier haut de gamme"
           fill
           priority
           sizes="100vw"
@@ -49,8 +49,8 @@ export function HeroSection() {
                 <LocationIcon />
               </span>
               <span>
-                <strong className="text-brand-pistachio">Priorité Marrakech</strong>
-                {' · '}Rabat · Casablanca · Tanger · Agadir
+                <strong className="text-brand-pistachio">Priorité Agadir</strong>
+                {' · '}Rabat · Marrakech · Tanger · Casablanca
               </span>
             </span>
           </p>
