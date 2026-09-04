@@ -5,7 +5,7 @@ import Image from "next/image";
 const PROPERTY_KINDS = [
   "Appartement",
   "Villa",
-  "Terrain ",
+  "Terrain",
   "Commerce",
   "Riad",
   "Immeuble",
