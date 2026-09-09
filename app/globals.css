@@ -93,3 +93,22 @@
     }
   }
 }
+
+/* Let the mobile introduction fill the screen while allowing short screens to scroll. */
+@media (max-width: 639px) {
+  .hero-container { padding: 18px 16px 20px; }
+  .hero-content { display: flex; flex: 1; flex-direction: column; }
+  .hero-content > span { align-self: center; font-size: 10px; letter-spacing: .1em; margin-bottom: 14px; }
+  .hero-content h1 { font-size: clamp(26px, 6.8vw, 40px); line-height: 1.08; }
+  .hero-content > p:first-of-type { font-size: 15px; line-height: 1.5; margin-top: 16px; }
+  .hero-properties { flex: 1; gap: 10px; margin-top: 20px; grid-template-rows: repeat(2, minmax(155px, 1fr)); }
+  .hero-properties > a { aspect-ratio: auto; min-height: 155px; }
+  .hero-properties > a > span:first-of-type { top: 10px; padding: 5px 10px; font-size: 11px; }
+  .hero-properties > a > span:last-of-type { bottom: 10px; left: 8px; right: 8px; font-size: 11px; line-height: 1.4; }
+  .hero-commission { margin-top: 16px; padding: 16px; column-gap: 12px; row-gap: 8px; }
+  .hero-commission > strong { font-size: 48px; }
+  .hero-commission > strong > span { font-size: 28px; }
+  .hero-commission > div > * { font-size: 16px; line-height: 1.15; }
+  .hero-commission > span { font-size: 11px; }
+  .hero-content > p:last-child { margin-top: 10px; font-size: 10px; }
+}

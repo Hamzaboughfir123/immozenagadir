@@ -32,7 +32,7 @@ export function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <Container className="flex h-20 items-center justify-between">
+      <Container className="flex h-20 items-center justify-between gap-2 max-sm:px-3">
         <a href="#accueil" className="flex items-center" aria-label={SITE_NAME}>
           <Image
             src="/images/logo.png"
@@ -40,7 +40,7 @@ export function Navbar() {
             width={175}
             height={60}
             priority
-            className="h-9 w-auto rounded-lg sm:h-10"
+            className="h-auto w-[120px] shrink-0 rounded-lg sm:w-[146px]"
           />
         </a>
 
@@ -70,10 +70,19 @@ export function Navbar() {
           </Button>
         </div>
 
+        <a
+          href={CONTACT.phoneHref}
+          className="inline-flex min-h-11 items-center justify-center gap-1 whitespace-nowrap text-xs font-bold text-brand-forest min-[375px]:text-sm lg:hidden"
+          aria-label={`Appeler ImmoZen Groupe au ${CONTACT.phone}`}
+        >
+          <PhoneIcon />
+          {CONTACT.phone}
+        </a>
+
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="flex h-10 w-10 items-center justify-center rounded-full text-brand-ink lg:hidden"
+          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-brand-ink lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}

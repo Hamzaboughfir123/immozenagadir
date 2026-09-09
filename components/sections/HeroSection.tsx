@@ -44,8 +44,8 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-black/25" />
       </div>
 
-      <Container className="relative flex min-h-[calc(100svh-5rem)] flex-col justify-start py-2 sm:py-4">
-        <div className="mx-auto w-full max-w-6xl text-center">
+      <Container className="hero-container relative flex min-h-[calc(100svh-5rem)] flex-col justify-start py-2 sm:py-4">
+        <div className="hero-content mx-auto w-full max-w-6xl text-center">
           <span className="mb-2 inline-flex items-center gap-2 rounded-sm border border-brand-pistachio/70 bg-black/30 px-3 py-1 text-[9px] font-bold uppercase tracking-[0.16em] text-white shadow-[0_0_18px_rgba(165,210,50,0.12)] sm:mb-4 sm:px-4 sm:py-1.5 sm:text-xs sm:tracking-[0.2em]">
             Agence immobilière nouvelle génération · Maroc
           </span>
@@ -61,7 +61,7 @@ export function HeroSection() {
             <br className="hidden sm:block" /> pour vendre ou louer <strong className="text-brand-pistachio">sans rien payer.</strong>
           </p>
 
-          <div className="mt-3 grid grid-cols-2 gap-1.5 sm:mt-5 sm:grid-cols-4 sm:gap-3">
+          <div className="hero-properties mt-3 grid grid-cols-2 gap-1.5 sm:mt-5 sm:grid-cols-4 sm:gap-3">
             {PROPERTY_TYPES.map((property) => (
               <a
                 key={property.label}
@@ -86,7 +86,7 @@ export function HeroSection() {
             ))}
           </div>
 
-          <div className="mt-2 grid grid-cols-[auto_1fr] items-center rounded-2xl border border-brand-pistachio bg-black/60 px-3 py-2 text-left backdrop-blur-sm sm:mt-3 sm:grid-cols-[auto_1fr_auto] sm:gap-5 sm:px-6 sm:py-2">
+          <div className="hero-commission mt-2 grid grid-cols-[auto_1fr] items-center rounded-2xl border border-brand-pistachio bg-black/60 px-3 py-2 text-left backdrop-blur-sm sm:mt-3 sm:grid-cols-[auto_1fr_auto] sm:gap-5 sm:px-6 sm:py-2">
             <strong className="font-sans text-4xl font-black leading-none text-white sm:text-6xl">
               0<span className="text-2xl text-brand-pistachio sm:text-4xl">DH</span>
             </strong>
