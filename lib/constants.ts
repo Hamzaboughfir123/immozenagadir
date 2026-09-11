@@ -27,6 +27,21 @@ export const SOCIAL_LINKS = [
   { label: "Facebook", href: "https://web.facebook.com/Immozengroupe" },
 ] as const;
 
+/** Site institutionnel du groupe (mention "ImmoZen Groupe" en pied de page). */
+export const GROUP_URL = "https://www.immozengroupe.com";
+
+/**
+ * Autres sites officiels du réseau ImmoZen (une ville = un site dédié, son
+ * propre ciblage SEO). Liens en dur (pas de nofollow, pas de nouvel onglet
+ * imposé) pour un maillage explicite entre sites de la même marque.
+ */
+export const NETWORK_SITES = [
+  { label: "Marrakech", href: "https://www.immozenmarrakech.com" },
+  { label: "Casablanca", href: "https://www.immozencasablanca.com" },
+  { label: "Rabat", href: "https://www.immozenrabat.com" },
+  { label: "Tanger", href: "https://www.immozentanger.com" },
+] as const;
+
 export const NAV_LINKS = [
   { label: "Accueil", href: "#accueil" },
   { label: "Pourquoi ImmoZen Groupe", href: "#pourquoi-immozen" },

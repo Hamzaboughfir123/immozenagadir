@@ -1,5 +1,12 @@
 import { Container } from "@/components/ui/Container";
-import { CONTACT, NAV_LINKS, SITE_NAME, SOCIAL_LINKS } from "@/lib/constants";
+import {
+  CONTACT,
+  GROUP_URL,
+  NAV_LINKS,
+  NETWORK_SITES,
+  SITE_NAME,
+  SOCIAL_LINKS,
+} from "@/lib/constants";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -93,11 +100,47 @@ export function Footer() {
       </Container>
 
       <div className="border-t border-white/10">
-        <Container className="flex flex-col gap-2 py-6 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            © {year} {SITE_NAME}. Tous droits réservés.
-          </p>
-          <p>Fait avec soin au Maroc.</p>
+        <Container className="flex flex-col gap-4 py-6 text-xs text-white/40">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <p>
+              © {year} {SITE_NAME}. Tous droits réservés.
+            </p>
+            <p>Fait avec soin au Maroc.</p>
+          </div>
+
+          <div className="flex flex-col gap-2 border-t border-white/5 pt-4 sm:flex-row sm:items-center sm:justify-between">
+            <p>
+              <a
+                href={GROUP_URL}
+                className="font-medium text-white/60 transition-colors hover:text-brand-pistachio"
+              >
+                ImmoZen Groupe
+              </a>{" "}
+              — Réseau immobilier du groupe ImmoZen
+            </p>
+
+            <nav
+              aria-label="ImmoZen au Maroc"
+              className="flex flex-wrap items-center gap-x-1.5 gap-y-1"
+            >
+              <span className="text-white/30">ImmoZen au Maroc :</span>
+              {NETWORK_SITES.map((site, index) => (
+                <span key={site.href} className="flex items-center gap-1.5">
+                  <a
+                    href={site.href}
+                    className="text-white/50 transition-colors hover:text-brand-pistachio"
+                  >
+                    {site.label}
+                  </a>
+                  {index < NETWORK_SITES.length - 1 ? (
+                    <span aria-hidden="true" className="text-white/20">
+                      ·
+                    </span>
+                  ) : null}
+                </span>
+              ))}
+            </nav>
+          </div>
         </Container>
       </div>
     </footer>
