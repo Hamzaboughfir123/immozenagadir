@@ -12,7 +12,7 @@ export function Footer() {
             {SITE_NAME}
           </p>
           <p className="max-w-xs text-sm leading-relaxed text-white/60">
-            Agence immobilière nouvelle génération au Maroc. IA, digital et
+            Agence immobilière nouvelle génération à Agadir. IA, digital et
             accompagnement humain au service de votre patrimoine.
           </p>
           <ul className="mt-2 flex gap-4 text-sm">

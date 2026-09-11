@@ -1,4 +1,5 @@
 import { LegalShell } from "@/components/legal/LegalShell";
+import { LEGAL_UPDATED_AT } from "@/lib/constants";
 import { buildMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 
@@ -10,7 +11,11 @@ export const metadata: Metadata = buildMetadata({
 
 export default function CookiesPage() {
   return (
-    <LegalShell title="Politique de cookies" updatedAt="17 août 2026">
+    <LegalShell
+      title="Politique de cookies"
+      path="/cookies"
+      updatedAt={LEGAL_UPDATED_AT.display}
+    >
       <p>
         Ce site peut utiliser des cookies techniques nécessaires à son bon
         fonctionnement, ainsi que des cookies de mesure d&apos;audience

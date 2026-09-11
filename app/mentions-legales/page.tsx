@@ -1,16 +1,21 @@
 import { LegalShell } from "@/components/legal/LegalShell";
+import { LEGAL_UPDATED_AT } from "@/lib/constants";
 import { buildMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = buildMetadata({
   title: "Mentions légales",
-  description: "Mentions légales du site ImmoZen Groupe, agence immobilière au Maroc.",
+  description: "Mentions légales du site ImmoZen Groupe, agence immobilière à Agadir.",
   alternates: { canonical: "/mentions-legales" },
 });
 
 export default function MentionsLegalesPage() {
   return (
-    <LegalShell title="Mentions légales" updatedAt="17 août 2026">
+    <LegalShell
+      title="Mentions légales"
+      path="/mentions-legales"
+      updatedAt={LEGAL_UPDATED_AT.display}
+    >
       <p>
         Le présent site est édité par <strong>ImmoZen Groupe</strong>
         [raison sociale, forme juridique, capital social à compléter],

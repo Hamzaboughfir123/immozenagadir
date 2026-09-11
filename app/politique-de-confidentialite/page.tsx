@@ -1,4 +1,5 @@
 import { LegalShell } from "@/components/legal/LegalShell";
+import { LEGAL_UPDATED_AT } from "@/lib/constants";
 import { buildMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 
@@ -11,7 +12,11 @@ export const metadata: Metadata = buildMetadata({
 
 export default function PolitiqueConfidentialitePage() {
   return (
-    <LegalShell title="Politique de confidentialité" updatedAt="17 août 2026">
+    <LegalShell
+      title="Politique de confidentialité"
+      path="/politique-de-confidentialite"
+      updatedAt={LEGAL_UPDATED_AT.display}
+    >
       <p>
         ImmoZen Groupe accorde une grande importance à la protection des données
         personnelles de ses visiteurs et prospects propriétaires,

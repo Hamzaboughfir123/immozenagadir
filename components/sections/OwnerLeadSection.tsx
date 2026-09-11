@@ -13,7 +13,7 @@ export function OwnerLeadSection() {
       <div className="absolute inset-0">
         <Image
           src="/images/hero-agadir.jpg"
-          alt="La marina d'Agadir au bord de l'océan Atlantique, avec ses résidences bord de mer"
+          alt="La plage d'Agadir dominée par la colline de la Kasbah, bordée de résidences en front de mer"
           fill
           loading="lazy"
           sizes="100vw"

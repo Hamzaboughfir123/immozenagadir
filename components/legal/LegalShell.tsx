@@ -1,19 +1,35 @@
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import { Container } from "@/components/ui/Container";
+import { SITE_URL } from "@/lib/constants";
+import { breadcrumbJsonLd } from "@/lib/seo";
 import type { ReactNode } from "react";
 
 export function LegalShell({
   title,
+  path,
   updatedAt,
   children,
 }: {
   title: string;
+  /** Chemin de la page (ex: "/mentions-legales"), pour le breadcrumb JSON-LD. */
+  path: string;
   updatedAt: string;
   children: ReactNode;
 }) {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: "Accueil", url: `${SITE_URL}/` },
+              { name: title, url: `${SITE_URL}${path}` },
+            ]),
+          ),
+        }}
+      />
       <Navbar />
       <main className="bg-white py-24 sm:py-32">
         <Container as="article" className="max-w-3xl">

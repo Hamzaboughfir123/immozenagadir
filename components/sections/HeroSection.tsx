@@ -5,7 +5,7 @@ const PROPERTY_TYPES = [
   {
     label: "Villa",
     image: "/images/property-types/villa.jpg",
-    description: "Vivez l'exception à Marrakech",
+    description: "Vivez l'exception à Agadir",
     href: "#types-de-biens",
   },
   {
@@ -33,8 +33,8 @@ export function HeroSection() {
     <section id="accueil" className="relative bg-brand-ink">
       <div className="absolute inset-0">
         <Image
-          src="/images/hero-marrakech.jpg"
-          alt="Marrakech au coucher du soleil, avec ses palmiers et son minaret"
+          src="/images/hero-agadir.jpg"
+          alt="La plage d'Agadir dominée par la colline de la Kasbah, bordée de résidences en front de mer, symbole d'Agadir et du patrimoine immobilier haut de gamme"
           fill
           priority
           sizes="100vw"
