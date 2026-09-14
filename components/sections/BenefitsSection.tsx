@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/Button";
+import { OpenPropertyLeadButton } from "@/components/property-lead/OpenPropertyLeadButton";
 import { Container } from "@/components/ui/Container";
 import Image from "next/image";
 
@@ -95,9 +95,9 @@ export function BenefitsSection() {
         </div>
 
         <div className="mt-6 flex justify-center">
-          <Button href="#confier-mon-bien" size="lg">
+          <OpenPropertyLeadButton size="lg">
             Je confie mon bien à ImmoZen Groupe <span aria-hidden="true">→</span>
-          </Button>
+          </OpenPropertyLeadButton>
         </div>
       </Container>
     </section>

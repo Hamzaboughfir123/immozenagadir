@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/Button";
+import { openPropertyLeadModal } from "@/components/property-lead/lead-modal-events";
 import { useEffect, useState } from "react";
 
 /**
@@ -23,7 +24,7 @@ export function MobileStickyCta() {
 
   return (
     <div className="fixed inset-x-0 bottom-0 z-40 border-t border-brand-ink/10 bg-white/95 px-4 py-3 backdrop-blur-md lg:hidden [padding-bottom:max(0.75rem,env(safe-area-inset-bottom))]">
-      <Button href="#confier-mon-bien" className="w-full" size="md">
+      <Button onClick={() => openPropertyLeadModal()} className="w-full" size="md">
         Confier mon bien
       </Button>
     </div>
