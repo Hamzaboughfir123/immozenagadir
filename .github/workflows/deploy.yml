@@ -43,4 +43,4 @@ jobs:
             echo "💾 Sauvegarde PM2..."
             pm2 save
 
-            echo "✅ Déploiement Agadir terminé !"
+            echo "✅ Deploiement Agadir terminé !"
