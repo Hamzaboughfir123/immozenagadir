@@ -33,6 +33,9 @@ export function buildMetadata(overrides: Partial<Metadata> = {}): Metadata {
     alternates: {
       canonical: SITE_URL,
     },
+    verification: {
+      google: "wpJrhZk_wly1Za7vTAXwvxMi01vES4S_Z_J1jKIM5O4",
+    },
     openGraph: {
       type: "website",
       locale: "fr_MA",
